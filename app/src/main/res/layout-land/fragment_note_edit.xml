@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+
+        <variable
+            name="viewmodel"
+            type="tuver.notepad.ui.noteedit.NoteEditViewModel" />
+
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/surface"
+        android:orientation="horizontal">
+
+        <ImageButton
+            style="@style/ImageButton.OnSurface"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/spacing2x"
+            android:contentDescription="@string/app_back"
+            android:onClick="@{() -> viewmodel.onBackPress()}"
+            android:src="@drawable/ic_arrow_back_24" />
+
+        <ScrollView
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/TextInputLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginHorizontal="@dimen/spacing2x"
+                    android:layout_marginTop="@dimen/spacing2x">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/title_edit_text"
+                        style="@style/TextInputEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/note_title"
+                        android:inputType="textMultiLine|textCapSentences"
+                        android:text="@={viewmodel.state.title}"
+                        android:textStyle="bold">
+
+                    </com.google.android.material.textfield.TextInputEditText>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/TextInputLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginHorizontal="@dimen/spacing2x">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/image_url_edit_text"
+                        style="@style/TextInputEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="@string/note_image_url"
+                        android:inputType="textMultiLine|textUri"
+                        android:text="@={viewmodel.state.imageUrl}"
+                        android:textStyle="bold">
+
+                    </com.google.android.material.textfield.TextInputEditText>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+                <com.google.android.material.textfield.TextInputLayout
+                    style="@style/TextInputLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginHorizontal="@dimen/spacing2x"
+                    android:layout_marginTop="@dimen/spacing2x">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:id="@+id/description_edit_text"
+                        style="@style/TextInputEditText"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:hint="@string/note_start_typing"
+                        android:inputType="textMultiLine|textCapSentences"
+                        android:paddingVertical="@dimen/spacing2x"
+                        android:text="@={viewmodel.state.description}">
+
+                    </com.google.android.material.textfield.TextInputEditText>
+
+                </com.google.android.material.textfield.TextInputLayout>
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+        </ScrollView>
+
+        <ImageButton
+            style="@style/ImageButton.OnSurface"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/spacing2x"
+            android:contentDescription="@string/note_delete"
+            android:onClick="@{() -> viewmodel.onDeleteNotClick()}"
+            android:src="@drawable/ic_delete_outline_24" />
+
+    </LinearLayout>
+
+</layout>

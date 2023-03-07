@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">Notepad</string>
+    <string name="app_back">Back</string>
+
+    <string name="note_title">Title</string>
+    <string name="note_image">Note image</string>
+    <string name="note_image_url">Image URL (optional)</string>
+    <string name="note_start_typing">Type your note here…</string>
+    <string name="note_create">Create note</string>
+    <string name="note_delete">Delete note</string>
+    <string name="note_edited_label">—edited</string>
+</resources>

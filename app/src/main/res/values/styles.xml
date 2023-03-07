@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <style name="Text">
+        <item name="android:lineSpacingExtra">2sp</item>
+        <item name="android:textColor">@color/onSurface</item>
+    </style>
+
+    <style name="Text.Body">
+        <item name="android:textSize">14sp</item>
+    </style>
+
+    <style name="Text.Sub">
+        <item name="android:textStyle">italic</item>
+        <item name="android:textSize">12sp</item>
+    </style>
+
+    <style name="Text.Title">
+        <item name="android:textStyle">bold</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    <style name="Fab">
+        <item name="android:textAllCaps">false</item>
+        <item name="android:layout_margin">@dimen/spacing3x</item>
+        <item name="android:includeFontPadding">false</item>
+    </style>
+
+    <style name="ImageButton">
+        <item name="android:padding">@dimen/spacing1x</item>
+    </style>
+
+    <style name="ImageButton.OnSurface">
+        <item name="android:background">?selectableItemBackgroundBorderless</item>
+        <item name="tint">@color/onSurface</item>
+    </style>
+
+    <style name="TextInputLayout">
+        <item name="boxBackgroundMode">none</item>
+        <item name="hintAnimationEnabled">false</item>
+        <item name="hintEnabled">false</item>
+    </style>
+
+    <style name="TextInputEditText">
+        <item name="android:paddingTop">@dimen/spacing1x</item>
+        <item name="android:paddingBottom">@dimen/spacing1x</item>
+        <item name="android:inputType">textCapSentences</item>
+    </style>
+
+</resources>

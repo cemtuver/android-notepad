@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_note"
+    app:startDestination="@id/noteSummaryListFragment">
+
+    <fragment
+        android:id="@+id/noteSummaryListFragment"
+        android:name="tuver.notepad.ui.notesummarylist.NoteSummaryListFragment"
+        android:label="NoteListFragment"
+        tools:layout="@layout/fragment_note_summary_list">
+
+        <action
+            android:id="@+id/toNoteEditFragment"
+            app:destination="@id/noteEditFragment"
+            app:enterAnim="@anim/anim_slide_in_right"
+            app:exitAnim="@anim/anim_slide_out_left"
+            app:popEnterAnim="@anim/anim_slide_in_left"
+            app:popExitAnim="@anim/anim_slide_out_right" />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/noteEditFragment"
+        android:name="tuver.notepad.ui.noteedit.NoteEditFragment"
+        android:label="NoteEditFragment"
+        tools:layout="@layout/fragment_note_edit">
+
+        <argument
+            android:name="noteSummaryModel"
+            app:argType="tuver.notepad.model.NoteSummaryModel"
+            app:nullable="true" />
+
+    </fragment>
+
+</navigation>

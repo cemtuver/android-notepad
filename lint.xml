@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<lint>
+    <issue id="MonochromeLauncherIcon" severity="ignore" />
+    <issue id="NotificationPermission" severity="ignore" /> <!-- Caused by Glide -->
+    <issue id="all">
+        <ignore path="\*/test/\*" />
+    </issue>
+</lint>

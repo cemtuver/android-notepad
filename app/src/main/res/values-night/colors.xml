@@ -1,0 +1,13 @@
+<resources>
+    <color name="primary">#FF015958</color>
+    <color name="primaryVariant">#AA015958</color>
+    <color name="onPrimary">#FFFFFFFF</color>
+    <color name="secondary">#FF027A7A</color>
+    <color name="secondaryVariant">#AA027A7A</color>
+    <color name="onSecondary">#FFFFFFFF</color>
+    <color name="surface">#303030</color>
+    <color name="surfaceOverlay">#55000000</color>
+    <color name="onSurface">#FFFFFFFF</color>
+    <color name="background">#FF000000</color>
+    <color name="backgroundVariant">#202020</color>
+</resources>
